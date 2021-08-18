@@ -1,0 +1,385 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'); /*POPPINGS*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); /*ROBOTO CONDENSED*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); /*ROBOTO MONO*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap'); /*OPEN SANS*/
+
+/*GERAIS*/
+body {
+    margin: 0;
+    padding: 0%;
+    background-color: #f6f6f6;
+}
+
+
+/*HEADER*/
+header {
+    margin: 0%;
+    position: sticky;
+    z-index: 1; /*DEFINE A ORDEM DE UM ELEMENTO*/
+    top: 0;
+}
+
+/*MENU*/
+.menu {
+    background-color: white;
+    border-bottom: 2px solid #e0e1e6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.acdceg-nome {
+    padding: 10px;
+}
+
+/*NAVEGAÇÃO MENU*/
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home, .projetos, .contatos, .temporadas, .colegio {
+    color: gray;
+    text-decoration: none;
+    padding: 17px 7px 16px 7px;
+    margin: 5px;
+}
+
+button {
+    background-color: #ff8a17;
+    border: 1px solid #ff8a17;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.096);
+}
+
+.nav-menu > div > a:hover {
+    color: #ff8a17;
+    border-bottom: 2px solid #ff8a17;
+    border-radius: 2px;
+}
+
+#current-page {
+    color: #ff8a17;
+    border-bottom: 2px solid #ff8a17;
+}
+
+@media screen and (max-width: 644px) {
+    header {
+        position: relative;
+    }
+
+    .menu {
+        padding-bottom: 5px;
+    }
+
+    .nav-menu > div > a:hover, #current-page {
+        border: 0px;
+    }
+
+    .home, .projetos, .contatos, .temporadas, .colegio {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .home, .projetos, .contatos, .temporadas, .colegio {
+        font-size: calc(11px + 6 * ((100vw - 320px) / 680));
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .home, .projetos, .contatos, .temporadas, .colegio {
+        font-size: 15px;
+    }
+}
+
+
+
+
+/*ASIDE*/
+/*ASIDE DIFERENCIAIS GERAIS*/
+.diferenciais-aside {
+    margin: 0px 10px 20px 10px;
+    background-color: rgba(255, 255, 255, 0.671);
+    border: 2px solid #e6e6e6;
+    box-shadow: 2px 2px 5px #e6e6e6;
+    border-radius: 5px;
+    padding-bottom: 8px;
+}
+
+.diferenciais-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    color: #ff8a17;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.082);
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .diferenciais-title {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    aside {
+        display: none;
+    }
+}
+
+
+
+/*ASIDE DIFERENCIAIS 01*/
+.diferencial-01-single {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "left-channel right-video";
+}
+
+.diferencial-01-single > a {
+    display: grid;
+    text-decoration: none;
+    grid-template-columns: 90px 160px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "icone-font-awesome div-inside-diferencial-01";
+    grid-area: left-channel;
+    padding: 5px;
+}
+
+.diferencial-01-single:hover {
+    background-color: gold;
+    transform: scale(1.006);
+}
+
+#icone-font-awesome {
+    grid-area: icone-font-awesome;
+    margin: auto;
+}
+
+.div-inside-diferencial-01 {
+    grid-area: div-inside-diferencial-01;
+
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    grid-template-rows: 30px 35px;
+    grid-template-areas: 
+    "inside-h3-01 inside-h3-01"
+    "inside-img-01 inside-p-01";
+    align-content: center;
+}
+
+.div-inside-diferencial-01 > h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #694966;
+    grid-area: inside-h3-01;
+
+    margin: auto 5px;
+}
+
+.div-inside-diferencial-01 > p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 8px;
+    color: #74526C;
+    font-weight: bolder;
+    grid-area: inside-p-01;
+
+    margin: auto 0;
+}
+
+.div-inside-diferencial-01 > img {
+    width: 25px;
+    margin: auto;
+    grid-area: inside-img-01;
+}
+
+.right-video {
+    text-align: center;
+    grid-area: right-video;
+}
+
+.right-video > a {
+    display: block;
+    text-decoration: none;
+    margin: auto;
+    padding: 5px;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+    margin: 0%;
+}
+
+.right-video > a > img {
+    width: 100px;
+    margin: auto;
+    border: 2px solid black;
+}
+
+.right-video > a:hover {
+    background-color: rgba(218, 165, 32, 0.397);
+    color: blue;
+}
+
+@media screen and (max-width: 1100px) {
+    .div-inside-diferencial-01 > img {
+        width: 20px;
+    }
+
+    .right-video > a {
+        font-size: 10px;
+    }
+
+    .right-video > a > img {
+        width: 90px;
+    }
+}
+
+
+
+/*ASIDE DIFERENCIAIS 02*/
+.diferencial-02-single > a {
+    display: grid;
+    text-decoration: none;
+    grid-template-columns: 135px 1fr;
+    grid-template-rows: repeat(4, 18px);
+    grid-template-areas: ". div-inside-diferencial-02";
+    padding: 8px 10px 8px 10px;
+}
+
+.diferencial-02-single > a:hover {
+    background-color: gold;
+    padding: 8px;
+}
+
+.diferencial-img {
+    width: 125px;
+    border: 2px solid black;
+}
+
+.div-inside-diferencial-02 {
+    color: black;
+    grid-area: div-inside-diferencial-02;
+
+    display: grid;
+    grid-template-columns: 20px 230px;
+    grid-template-rows: 47px 18px;
+    grid-template-areas: 
+    "inside-h3-02 inside-h3-02"
+    "inside-img-02 inside-p-02";
+}
+
+.div-inside-diferencial-02 > h3 {
+    text-align: justify;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(49, 49, 49);
+    font-size: 12px;
+    grid-area: inside-h3-02;
+}
+
+.div-inside-diferencial-02 > p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 8px;
+    margin-left: 3px;
+    align-self: center;
+    grid-area: inside-p-02;
+}
+
+.div-inside-diferencial-02 > img {
+    width: 18px;
+    border-radius: 50%;
+    grid-area: inside-img-02;
+}
+
+@media screen and (max-width: 1100px) {
+    .diferencial-img {
+        width: 100px;
+    }
+
+    .diferencial-02-single > a {
+        grid-template-columns: 110px 1fr;
+        grid-template-rows: repeat(4, 14px);
+        grid-template-areas: ". div-inside-diferencial-02";
+    }
+
+    .div-inside-diferencial-02 {
+        grid-template-columns: 15px 230px;
+        grid-template-rows: 40px 18px;
+        grid-template-areas: 
+        "inside-h3-02 inside-h3-02"
+        "inside-img-02 inside-p-02";
+    }
+
+    .div-inside-diferencial-02 > h3 {
+        font-size: 11px;
+    }
+    
+    .div-inside-diferencial-02 > p {
+        font-size: 8px;
+    }
+    
+    .div-inside-diferencial-02 > img {
+        width: 15px;
+    }
+}
+
+
+/*FOOTER*/
+.div-footer {
+    background-color: white;
+    border-top: 2px solid #e0e1e6;
+    padding: 10px 15px 0px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.div-footer > img {
+    width: 75px;
+    margin-left: 40px;
+    margin-bottom: auto;
+}
+
+.div-footer-text > p {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: grey;
+    text-align: right;
+}
+
+@media screen and (max-width: 840px) {
+    .div-footer {
+        justify-content: left;
+    }
+
+    .div-footer > img {
+        margin: 0%;
+    }
+
+    .div-footer-text > p {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .div-footer > img {
+        width: 50px;
+    }
+
+    .div-footer-text > p {
+        font-size: 10px;
+    }
+}

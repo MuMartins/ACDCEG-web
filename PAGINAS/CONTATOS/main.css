@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'); /*POPPINGS*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); /*ROBOTO CONDENSED*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); /*ROBOTO MONO*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap'); /*OPEN SANS*/
+
+/*GERAIS*/
+body {
+    margin: 0;
+    padding: 0%;
+    background-color: #f6f6f6;
+}
+
+/*MAIN*/
+main {
+    min-width: 320px;
+    max-width: 1270px;
+    margin: auto;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+.div-main {
+    padding: 2px 10px 2px 10px;
+}
+
+.main-h2 {
+    position: relative;
+    margin: 15px 0px;
+    font-size: 30px;
+    color: #ff8a17;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.082);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.main-h2::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 1.2em;
+    height: 0;
+    width: 50px;
+    border-top: 2px solid #ff94297a;
+    border-radius: 18px;
+}
+
+.main-p {
+    margin: 10px 0px;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-indent: 20px;
+}
+
+.div-img {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.div-img > img {
+    position: relative;
+    display: flex;
+    margin: auto;
+    transition: transform .5s;
+    
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.div-img > img:hover {
+    transform: scale(1.05);
+}
+
+.img-text {
+    cursor: context-menu;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    position: absolute;
+    margin: 0;
+    bottom: 15px;
+    left: 15px;
+
+}
+
+@media screen and (max-width: 500px) {
+    .img-text {
+        font-size: 13px;
+    }
+
+    .main-h2 { 
+        font-size: 25px;
+    }
+
+    .main-p { 
+        font-size: 13px;
+    }
+}
