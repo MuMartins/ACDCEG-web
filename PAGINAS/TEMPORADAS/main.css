@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); /*ROBOTO CONDENSED*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); /*ROBOTO MONO*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap'); /*OPEN SANS*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'); /*INTER*/
 
 /*GERAIS*/
 body {
@@ -112,35 +113,49 @@ section {
 /*BOX TEMPORADA*/
 /*AJUSTE DA BOX*/
 .box-temporada {
-    border: 1px solid gray;
-    border-radius: 8px;
+    background-color: #f2f2f2;
+    max-width: 750px;
+    margin: auto;
+    margin-top: 25px;
+    border-left: 10px solid red;
 }
 
 .expand-small {
     padding: 0px 10px 10px 10px;
+    margin: 10px;
+    border-bottom: 1px solid #bebebe;
     display: grid;
-    grid-template-columns: auto 70px;
+    grid-template-columns: auto 100px;
     grid-template-rows: auto;
     grid-template-areas: 
     "h3-expand button-expand"
     "text-expand text-expand";
 }
 
-.button-expand {
-    display: inline;
+label {
     grid-area: button-expand;
     justify-self: center;
     align-self: center;
-    border: 1px solid red;
     background-color: red;
-    padding: 10px;
+    padding: 10px 30px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.label:hover {
+    background-color: #bc1e31;
 }
 
 .expand-small > h3 {
-    display: inline-block;
     grid-area: h3-expand;
-    color: red;
-    font-family: 'Roboto Mono', sans-serif;
+    color: #4d4d4d;
+    font-weight: bolder;
+    font-family: 'Inter', sans-serif;
     margin-left: 10px;
 }
 
@@ -150,26 +165,16 @@ section {
 
 
 /*EXPANDIR*/
-#expand, #expand1 {
+.box-temporada > input {
     display: none;
 }
 
-#expand + .expand-small, #expand1 + .expand-small {
-    max-height: 60px;
+.box-temporada > input + .expand-small {
+    max-height: 50px;
     overflow: hidden;
     transition: all .3s ease;
 }
 
-#expand:checked + .expand-small, #expand1:checked + .expand-small {
+.box-temporada > input:checked + .expand-small  {
     max-height: 250px;
-}
-
-label {
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-label:hover {
-    text-decoration: none;
 }
