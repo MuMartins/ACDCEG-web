@@ -175,7 +175,7 @@ label {
 }
 
 .expand-small > img {
-    width: 100px;
+    height: 100px;
     justify-self: center;
     align-self: center;
     grid-area: img-expand;
