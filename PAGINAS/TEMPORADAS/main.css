@@ -125,11 +125,12 @@ section {
     margin: 10px;
     border-bottom: 1px solid #bebebe;
     display: grid;
-    grid-template-columns: auto 110px;
-    grid-template-rows: auto;
+    grid-template-columns: 120px auto 110px;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
-    "h3-expand button-expand"
-    "text-expand text-expand";
+    "date-expand h3-expand button-expand"
+    "img-expand img-expand img-expand"
+    "text-expand text-expand text-expand";
 }
 
 label {
@@ -156,11 +157,32 @@ label {
     font-weight: bolder;
     font-family: 'Inter', sans-serif;
     margin-left: 10px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     grid-area: h3-expand;
+    align-self: center;
+}
+
+.date {
+    color: #4d4d4d;
+    font-weight: bolder;
+    font-family: 'Inter', sans-serif;
+    font-size: large;
+    margin-left: 10px;
+    text-transform: capitalize;
+    border-right: 1px solid gray;
+    grid-area: date-expand;
+    align-self: center;
+}
+
+.expand-small > img {
+    width: 100px;
+    justify-self: center;
+    align-self: center;
+    grid-area: img-expand;
 }
 
 .expand-small > p {
+    padding: 10px;
     grid-area: text-expand;
 }
 
@@ -177,5 +199,5 @@ label {
 }
 
 .box-temporada > input:checked + .expand-small  {
-    max-height: 250px;
+    max-height: 300px;
 }
