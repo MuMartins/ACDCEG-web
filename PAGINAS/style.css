@@ -368,6 +368,7 @@ button {
     font-family: 'Roboto Condensed', sans-serif;
     color: grey;
     text-align: right;
+    margin-right: 40px;
 }
 
 @media screen and (max-width: 840px) {
