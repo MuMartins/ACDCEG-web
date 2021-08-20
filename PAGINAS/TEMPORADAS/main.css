@@ -91,9 +91,8 @@ section {
 /*AJUSTE DA BOX*/
 .box-temporada {
     background-color: #e2e2e256;
-    max-width: 750px;
+    max-width: auto;
     margin: auto;
-    margin-top: 25px;
     border-left: 10px solid red;
 }
 
@@ -102,7 +101,7 @@ section {
     margin: 10px;
     border-bottom: 1px solid #bebebe;
     display: grid;
-    grid-template-columns: 120px auto 110px;
+    grid-template-columns: 110px 1fr auto;
     grid-template-rows: auto auto auto;
     grid-template-areas: 
     "date-expand h3-expand button-expand"
@@ -142,9 +141,8 @@ label:hover {
 .date {
     color: #4d4d4d;
     font-weight: bolder;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto Mono', sans-serif;
     font-size: large;
-    margin-left: 10px;
     text-transform: capitalize;
     border-right: 1px solid gray;
     grid-area: date-expand;
@@ -174,13 +172,38 @@ label:hover {
 
     label {
         padding: 10px 20px;
-        justify-self: right;
         font-size: 11px;
     }
 
     .expand-small {
+        margin: 5px;
         display: grid;
-        grid-template-columns: 100px auto auto;
+        grid-template-columns: 90px 1fr auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "date-expand h3-expand button-expand"
+        "img-expand img-expand img-expand"
+        "text-expand text-expand text-expand";
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .box-temporada {
+        border-left: 3px solid red;
+    }
+
+    .expand-small > h3 {
+        font-size: 12px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+
+    .expand-small {
+        margin: 5px;
+        display: grid;
+        grid-template-columns: 75px 1fr auto;
         grid-template-rows: auto auto auto;
         grid-template-areas: 
         "date-expand h3-expand button-expand"
@@ -207,6 +230,12 @@ label:hover {
 @media screen and (max-width: 600px) {
     .box-temporada > input + .expand-small {
         max-height: 35px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .box-temporada > input + .expand-small {
+        max-height: 29px;
         overflow: hidden;
         transition: all .3s ease;
     }
