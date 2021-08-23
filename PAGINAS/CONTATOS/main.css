@@ -117,24 +117,35 @@ section {
 }
 
 .div-contatos-single {
-    border: 1px solid red;
+    border: 2px solid #e6e6e6;
+    box-shadow: 2px 2px 5px #e6e6e6;
+    border-radius: 10px;
     margin: 10px;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 60px 5fr 50px;
     grid-template-areas: 
-    "contatos-icone"
+    "contatos-text"
     "contatos-img"
     "contatos-button";
     justify-items: center;
     align-items: center;
 }
 
-.div-contatos-single > i {
+.div-contatos-single-text {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    grid-area: contatos-text;
+}
+
+.div-contatos-single-text > i {
     font-size: 40px;
-    justify-content: center;
-    align-content: center;
     grid-area: contatos-icone;
+}
+
+.div-contatos-single-text > h3 {
+    grid-area: contatos-h3;
 }
 
 .div-contatos-single > img {
