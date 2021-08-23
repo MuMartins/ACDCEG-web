@@ -49,7 +49,7 @@ header {
     margin: 5px;
 }
 
-button {
+#button-menu {
     background-color: #ff8a17;
     border: 1px solid #ff8a17;
     border-radius: 15px;
@@ -87,7 +87,7 @@ button {
 }
 
 @media screen and (max-width: 450px) {
-    button {
+    #button-menu {
         padding: 0%;
     }
 
