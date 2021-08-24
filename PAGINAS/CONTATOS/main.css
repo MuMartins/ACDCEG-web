@@ -116,19 +116,28 @@ section {
 }
 
 .div-contatos-single {
+    background-color: #fcfcfc;
     border: 2px solid #e6e6e6;
     box-shadow: 2px 2px 5px #e6e6e6;
     border-radius: 10px;
     margin: 10px;
+    overflow: hidden;
+    transition: transform .2s;
+
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 1fr auto 1fr;
+    grid-template-rows: 60px auto 60px;
     grid-template-areas: 
     "contatos-text"
     "contatos-img"
     "contatos-button";
     justify-items: center;
     align-items: center;
+}
+
+.div-contatos-single:hover {
+    transform: scale(1.04);
+    transition: all .2s ease-in-out
 }
 
 .div-contatos-single-text {
@@ -162,8 +171,7 @@ section {
 }
 
 .div-contatos-single > img {
-    width: 100%;
-    max-width: 300px;
+    width: 300px;
     height: auto;
     grid-area: contatos-img;
 }
@@ -180,4 +188,40 @@ section {
     text-transform: uppercase;
 
     grid-area: contatos-button;
+}
+
+.div-contatos-single > a > button:hover {
+    background-color: grey;
+    border: 1px solid grey;
+}
+
+@media screen and (max-width: 1150px) {
+    .div-contatos-single {
+        margin: 5px 0px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .div-contatos-single > img {
+        width: 270px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .div-contatos-single-text > i {
+        font-size: 30px;
+    }
+
+    .div-contatos-single-text > h3 {
+        font-size: 18px;
+    }
+
+    .div-contatos-single > img {
+        width: 200px;
+    }
+
+    .div-contatos-single > a > button {
+        font-size: 11px;
+        padding: 5px 25px;
+    }
 }
