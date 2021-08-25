@@ -174,6 +174,7 @@ header {
 
 #icone-font-awesome {
     grid-area: icone-font-awesome;
+    font-size: 65px;
     margin: auto;
 }
 
@@ -371,7 +372,17 @@ header {
     margin-right: 40px;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1000px) {
+    .div-footer > img {
+        margin-left: 0;
+    }
+
+    .div-footer-text > p {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 803px) {
     .div-footer {
         justify-content: left;
     }
@@ -385,7 +396,7 @@ header {
     }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 644px) {
     .div-footer > img {
         width: 50px;
     }

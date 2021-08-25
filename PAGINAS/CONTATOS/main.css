@@ -111,7 +111,7 @@ section {
 .div-contatos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: center;
 }
 
@@ -120,13 +120,13 @@ section {
     border: 2px solid #e6e6e6;
     box-shadow: 2px 2px 5px #e6e6e6;
     border-radius: 10px;
-    margin: 10px;
+    margin: 5px;
     overflow: hidden;
     transition: transform .2s;
 
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 60px auto 60px;
+    grid-template-rows: 50px auto 50px;
     grid-template-areas: 
     "contatos-text"
     "contatos-img"
@@ -153,7 +153,7 @@ section {
 }
 
 .div-contatos-single-text > i {
-    font-size: 40px;
+    font-size: 30px;
     margin: auto;
     grid-area: contatos-icone;
 }
@@ -163,7 +163,7 @@ section {
     font-family: 'Poppings', sans-serif;
     margin: auto;
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: capitalize;
     grid-area: contatos-h3;
     justify-self: center;
@@ -171,7 +171,7 @@ section {
 }
 
 .div-contatos-single > img {
-    width: 300px;
+    width: 180px;
     height: auto;
     grid-area: contatos-img;
 }
@@ -179,7 +179,7 @@ section {
 .div-contatos-single > a > button {
     color: white;
     font-family: 'Poppins', sans-serif;
-    padding: 5px 50px;
+    padding: 5px 30px;
     background-color: black;
     border: 1px solid black;
     border-radius: 5px;
@@ -201,27 +201,7 @@ section {
     }
 }
 
-@media screen and (max-width: 1060px) {
-    .div-contatos-single > img {
-        width: 270px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .div-contatos-single-text > i {
-        font-size: 30px;
-    }
-
-    .div-contatos-single-text > h3 {
-        font-size: 18px;
-    }
-
-    .div-contatos-single > img {
-        width: 200px;
-    }
-
-    .div-contatos-single > a > button {
-        font-size: 11px;
-        padding: 5px 25px;
-    }
+/*FORMULARIO DE CONTATO*/
+.div-contatos-form {
+    width: 100px;
 }
