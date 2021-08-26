@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); /*ROBOTO MONO*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap'); /*OPEN SANS*/
 
+
 /*GERAIS*/
 body {
     margin: 0;
@@ -201,7 +202,34 @@ section {
     }
 }
 
+@media screen and (max-width: 380px) {
+    .div-contatos-single > img {
+        width: 170px;
+    }
+}
+
 /*FORMULARIO DE CONTATO*/
 .div-contatos-form {
-    width: 100px;
+    margin: auto;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border: 1px solid red;
+}
+
+form > li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.74);
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize
+}
+
+.div-contatos-input {
+    display: inline;
 }

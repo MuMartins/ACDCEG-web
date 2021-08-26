@@ -161,6 +161,7 @@ section {
     height: auto;
     border-radius: 50%;
     margin: auto;
+    filter: drop-shadow(1px 1px 2px #585858);
 
     grid-area: profile-img;
 }
@@ -210,7 +211,7 @@ section {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 415px) {
     .profile-single > img {
         width: 60px;
     }
@@ -227,4 +228,3 @@ section {
         font-size: 8px;
     }
 }
-
