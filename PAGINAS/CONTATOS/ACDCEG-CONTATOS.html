@@ -118,14 +118,72 @@
 
                 <section>
                     <h2 class="main-h2">Formulário para contato</h2>
-                    <div class="div-contatos-form">
+                    <div class="container-form">
                         <form>
-                            <li>
-                                <label for="nome">Nome:</label>
-                                <div class="div-contatos-input">
-                                    <input type="text" class="div-contatos-input" id="nome" autocomplete="off">
+                            <div class="row-form">
+                                <div class="row-label">
+                                    <label for="first-name">Primeiro nome:</label>
                                 </div>
-                            </li>
+                                <div class="row-input">
+                                    <input type="text" id="first-name" name="first-name" placeholder="Primeiro nome...">
+                                </div>
+                            </div>
+
+                            <div class="row-form">
+                                <div class="row-label">
+                                    <label for="second-name">Segundo nome:</label>
+                                </div>
+                                <div class="row-input">
+                                    <input type="text" id="second-name" name="second-name" placeholder="Segundo nome...">
+                                </div>
+                            </div>
+
+                            <div class="row-form">
+                                <div class="row-label">
+                                    <label for="email">Seu email:</label>
+                                </div>
+                                <div class="row-input">
+                                    <input type="email" id="email" name="email" placeholder="Seu email...">
+                                </div>
+                            </div>
+
+                            <div class="row-form">
+                                <div class="row-label">
+                                    <label for="your-age">Sua idade:</label>
+                                </div>
+                                <div class="row-input">
+                                    <input type="number" id="your-age" name="your-age" placeholder="Sua idade..." min="15" max="99">
+                                </div>
+                            </div>
+
+                            <div class="row-form">
+                                <div class="row-label">
+                                    <label for="local">Sua localidade:</label>
+                                </div>
+                                <div class="row-select">
+                                    <select id="local" name="local">
+                                        <option value="" selected disabled>Selecione uma opção</option>
+                                        <option value="norte">Norte</option>
+                                        <option value="nordeste">Nordeste</option>
+                                        <option value="centro-oeste">Centro-oeste</option>
+                                        <option value="sudoeste">Sudoeste</option>
+                                        <option value="sul">Sul</option>
+                                      </select>
+                                </div>
+                            </div>
+
+                            <div class="row-form">
+                                <div class="row-label">
+                                    <label for="message">Sua mensagem:</label>
+                                </div>
+                                <div class="row-textarea">
+                                    <textarea id="message" name="message" placeholder="Sua mensagem..." cols="30" rows="4"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="div-button">
+                                <input type="button" class="send-button" onclick="alert('Mensagem enviada com sucesso! Responderemos o mais rápido possível.')" value="Enviar!">
+                            </div>
                         </form>
                     </div>
                 </section>

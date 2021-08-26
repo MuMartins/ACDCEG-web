@@ -209,27 +209,68 @@ section {
 }
 
 /*FORMULARIO DE CONTATO*/
-.div-contatos-form {
-    margin: auto;
-    width: 100%;
-    max-width: 650px;
-    height: auto;
-    border: 1px solid red;
+.container-form {
+    border-radius: 10px;
+    background-color: rgba(219, 219, 219, 0.342);
+    padding: 20px;
 }
 
-form > li {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
+.row-form::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.74);
     font-family: 'Poppins', sans-serif;
-    text-transform: capitalize
+    text-transform: capitalize;
 }
 
-.div-contatos-input {
-    display: inline;
+.row-label {
+    float: left;
+    width: 25%;
 }
+
+.row-input > input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e1e6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+}
+
+.row-input, .row-select, .row-textarea {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.div-button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.send-button {
+    margin-top: 20px;
+    padding: 10px 70px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border: 1px solid #ff8a17;
+    border-radius: 15px;
+    background-color: #ff8a17;
+}
+
+@media screen and (max-width: 720px) {
+    .row-label, .row-input, .row-select, .row-textarea, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+  }
