@@ -162,7 +162,7 @@ header {
     grid-template-columns: 90px 160px;
     grid-template-rows: auto;
     grid-template-areas:
-    "midiam-icon div-inside-diferencial-01";
+    "midia-icon div-inside-diferencial-01";
     grid-area: left-channel;
     padding: 5px;
 }
@@ -173,9 +173,11 @@ header {
 }
 
 #midia-icon {
-    grid-area: midiam-icon;
+    grid-area: midia-icon;
     width: 70px;
+    height: 70px;
     margin: auto;
+    align-content: center;
 }
 
 .div-inside-diferencial-01 {
