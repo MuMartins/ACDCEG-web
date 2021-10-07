@@ -162,7 +162,7 @@ header {
     grid-template-columns: 90px 160px;
     grid-template-rows: auto;
     grid-template-areas:
-    "icone-font-awesome div-inside-diferencial-01";
+    "midiam-icon div-inside-diferencial-01";
     grid-area: left-channel;
     padding: 5px;
 }
@@ -172,9 +172,9 @@ header {
     transform: scale(1.006);
 }
 
-#icone-font-awesome {
-    grid-area: icone-font-awesome;
-    font-size: 65px;
+#midia-icon {
+    grid-area: midiam-icon;
+    width: 70px;
     margin: auto;
 }
 
