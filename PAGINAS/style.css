@@ -42,7 +42,7 @@ header {
     font-family: 'Poppins', sans-serif;
 }
 
-.home, .projetos, .contatos, .temporadas, .colegio {
+.home, .contatos, .temporadas, .colegio {
     color: gray;
     text-decoration: none;
     padding: 17px 7px 16px 7px;
@@ -81,7 +81,7 @@ header {
         border: 0px;
     }
 
-    .home, .projetos, .contatos, .temporadas, .colegio {
+    .home, .contatos, .temporadas, .colegio {
         margin-bottom: 15px;
     }
 }
